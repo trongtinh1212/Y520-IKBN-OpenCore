@@ -48,14 +48,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-PMC.aml</string>
-				<key>Path</key>
-				<string>SSDT-PMC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>SSDT-PNLF.aml</string>
 				<key>Path</key>
 				<string>SSDT-PNLF.aml</string>
@@ -258,8 +250,6 @@
 	<dict>
 		<key>Add</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x1b,0x0)</key>
-			<dict/>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
@@ -277,9 +267,12 @@
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x2)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>built-in</key>
+				<data>AQ==</data>
+			</dict>
 		</dict>
-		<key>Delete</key>
-		<dict/>
 	</dict>
 	<key>Kernel</key>
 	<dict>
@@ -500,6 +493,42 @@
 				<string>Any</string>
 				<key>BundlePath</key>
 				<string>IntelBluetoothFirmware.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>IntelBluetoothInjector.kext</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string></string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NoTouchID</string>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>NoTouchID.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -955,16 +984,26 @@
 			<true/>
 			<key>AllowSetDefault</key>
 			<true/>
+			<key>ApECID</key>
+			<integer>0</integer>
 			<key>AuthRestart</key>
+			<false/>
+			<key>BootProtect</key>
+			<string>Bootstrap</string>
+			<key>DmgLoading</key>
+			<string>Signed</string>
+			<key>EnablePassword</key>
 			<false/>
 			<key>BlacklistAppleUpdate</key>
 			<true/>
-			<key>BootProtect</key>
-			<string>Bootstrap</string>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
+			<key>PasswordSalt</key>
+			<data></data>
+			<key>PasswordHash</key>
+			<data></data>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
@@ -1012,6 +1051,8 @@
 				<data>Rg==</data>
 				<key>boot-args</key>
 				<string>keepsyms=1 debug=0x100 alcid=3 igfxonln=1 -wegnoegpu </string>
+				<key>run-efi-updater</key>
+				<string>No</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1076,7 +1117,7 @@
 			<key>ARTFrequency</key>
 			<integer>0</integer>
 			<key>BoardProduct</key>
-			<string>Mac-551B86E5744E2388</string>
+			<string></string>
 			<key>BoardRevision</key>
 			<data></data>
 			<key>DevicePathsSupported</key>
@@ -1098,39 +1139,39 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro14,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02W50NMHTD5</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>C066817B-A7DB-4FB8-8814-76158229DC20</string>
+			<string></string>
 		</dict>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02805609QXJ1JHAD</string>
+			<string></string>
 			<key>ROM</key>
-			<data>LdaIKdwg</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro14,3</string>
 			<key>SystemSerialNumber</key>
-			<string>C02W6RZMHTD5</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>CA144AAD-2056-46A6-A643-20B689A40F3B</string>
+			<string></string>
 		</dict>
 		<key>PlatformNVRAM</key>
 		<dict>
 			<key>BID</key>
-			<string>Mac-551B86E5744E2388</string>
+			<string></string>
 			<key>FirmwareFeatures</key>
-			<data>fuEP/AAAAAA=</data>
+			<data></data>
 			<key>FirmwareFeaturesMask</key>
-			<data>f/8f/wAAAAA=</data>
+			<data></data>
 			<key>MLB</key>
-			<string>C02804902GUJ1JHAD</string>
+			<string></string>
 			<key>ROM</key>
-			<data>LdaIKdwg</data>
+			<data></data>
 		</dict>
 		<key>SMBIOS</key>
 		<dict>
@@ -1147,27 +1188,25 @@
 			<key>BoardManufacturer</key>
 			<string>Apple</string>
 			<key>BoardProduct</key>
-			<string>Mac-551B86E5744E2388</string>
+			<string></string>
 			<key>BoardSerialNumber</key>
-			<string>C02804902GUJ1JHAD</string>
+			<string></string>
 			<key>BoardType</key>
 			<integer>10</integer>
 			<key>BoardVersion</key>
 			<string>1.0</string>
 			<key>ChassisAssetTag</key>
-			<string>MacBook-Aluminum</string>
+			<string></string>
 			<key>ChassisManufacturer</key>
-			<string>Lenovo</string>
-			<key>ChassisSerialNumber</key>
-			<string>C02W50NMHTD5</string>
+			<string></string>
 			<key>ChassisType</key>
 			<integer>9</integer>
 			<key>ChassisVersion</key>
-			<string>Mac-551B86E5744E2388</string>
+			<string></string>
 			<key>FirmwareFeatures</key>
-			<data>fuEP/AAAAAA=</data>
+			<data></data>
 			<key>FirmwareFeaturesMask</key>
-			<data>f/8f/wAAAAA=</data>
+			<data></data>
 			<key>MemoryFormFactor</key>
 			<integer>0</integer>
 			<key>PlatformFeature</key>
@@ -1183,11 +1222,11 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro14,3</string>
 			<key>SystemSKUNumber</key>
-			<string>Mac-551B86E5744E2388</string>
+			<string></string>
 			<key>SystemSerialNumber</key>
-			<string>C02W50NMHTD5</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>C066817B-A7DB-4FB8-8814-76158229DC20</string>
+			<string></string>
 			<key>SystemVersion</key>
 			<string>1.0</string>
 		</dict>
